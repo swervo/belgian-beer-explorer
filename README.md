@@ -19,9 +19,9 @@ Your own instance of the application is automatically deployed, and your own Pos
 
 1. If the Heroku Toolbelt is not install on your system, [install it](https://toolbelt.heroku.com/) now.
 
-1. Open a browser, [access beers.sql](https://raw.githubusercontent.com/ccoenraets/belgian-beer-explorer/master/beers.sql), and save the file locally. 
+1. Open a browser, [access beers.sql](https://raw.githubusercontent.com/ccoenraets/belgian-beer-explorer/master/beers.sql), and save the file locally.
 
-1. On the command prompt, type the following command to populate your database: 
+1. On the command prompt, type the following command to populate your database:
  
     ```
     heroku pg:psql --app YOUR_HEROKU_APP_NAME < beers.sql
@@ -33,11 +33,16 @@ Follow the instructions below if you prefer to install the application on your l
 
 1. Install the latest version of [Node.js](https://nodejs.org). This application requires Node.js 4+.
 
-1. Install [Postgres](http://www.postgresql.org/) locally 
+1. Clone this repository or download and unzip [this](https://github.com/ccoenraets/belgian-beer-explorer/archive/master.zip) zip file.
+
+1. Install [Postgres](http://www.postgresql.org/) locally
 
 1. Start Postgres and create a database called **belgianbeers**.
 
-1. Clone this repository or download and unzip [this](https://github.com/ccoenraets/belgian-beer-explorer/archive/master.zip) zip file.
+1. Type the following command to populate the database (assuming the database is called belgian beers):
+    ```
+    psql belgianbeers < beers.sql
+    ```
 
 1. Navigate to the **belgian-beer-explorer** directory and install the project dependencies:
 
@@ -60,7 +65,5 @@ Follow the instructions below if you prefer to install the application on your l
     ```
     npm start
     ```
-    
-    The database is automatically populated
     
 1. Open a browser and access [http://localhost:5000](http://localhost:5000)
